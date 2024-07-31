@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemplos de javascript</title>
+    <link rel="stylesheet" href="java.css">
+</head>
+
+<body id="corpo">
+    <h1>Alteração de conteudo</h1>
+    <p id="teste">olá mundo</p>
+    <button class="botao" onclick="altera()">Altera O conteudo</button>
+
+<img id="lamp" style="width: 50px;" src="off.gif" alt="lampada">
+<button onclick="liga()">Liga</button>
+<button onclick="desliga()">desliga</button>
+
+<script>
+    function altera(){
+document.getElementById("teste").innerText = "ola javascript";
+}
+</script>
+
+<script>
+    function liga(){
+        document.getElementById("lamp").src="on.gif";
+    }
+
+
+    function desliga(){
+        document.getElementById("lamp").src="off.gif";
+    }
+</script>
+
+<h1>Alteração formatação</h1>
+<button id="btn1" onclick="escuro()">Escuro</button>
+<button id="btn2" onclick="claro()" style="display: none;">claro</button>
+
+<script>
+function escuro(){
+    document.getElementById("corpo").style.backgroundColor="#333333";
+    document.getElementById("corpo").style.color = "white"
+
+    document.getElementById("btn1").style.display = "none";
+    document.getElementById("btn2").style.display = "block";
+;}
+</script>
+
+<script>
+function claro(){
+    document.getElementById("corpo").style.backgroundColor="white";
+    document.getElementById("corpo").style.color = "black";
+
+    document.getElementById("btn1").style.display = "block";
+    document.getElementById("btn2").style.display = "none";
+;}
+
+
+
+</script>
+<h1>Aparecer e Ocultar</h1>
+<p id="teste2">OLÁ MUNDO</p>
+
+<button onclick="oculta('none')">Ocultar</button>
+<Button onclick="oculta('block')">Aparecer</Button>
+
+<script>
+    function oculta(x){
+document.getElementById("teste2").style.display= x;
+}
+</script>
+</body >
+</html>
